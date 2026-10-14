@@ -1,0 +1,12 @@
+.scramble {
+  display: inline-grid;
+  vertical-align: baseline;
+}
+
+.scramble > span {
+  grid-area: 1 / 1;
+}
+
+.measure {
+  visibility: hidden;
+}

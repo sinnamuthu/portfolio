@@ -1,0 +1,2487 @@
+.showcase {
+  min-width: 0;
+  overflow: hidden;
+  background: #eef4fb;
+  color: #25354d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.showcase *,
+.showcase *::before,
+.showcase *::after {
+  box-sizing: border-box;
+}
+
+.showcaseTop {
+  display: flex;
+  min-height: 51px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 14px;
+  border-bottom: 1px solid #e6edf5;
+  background: #fff;
+}
+
+.showcaseTitle {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.brandMark {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 8px;
+  background: #e6efff;
+  color: #337af2;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.08em;
+}
+
+.showcaseTitle > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.showcaseTitle strong {
+  color: #24344b;
+  font-size: 10px;
+  letter-spacing: -0.02em;
+}
+
+.showcaseTitle small {
+  color: #8996aa;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.demoBadge {
+  flex: 0 0 auto;
+  padding: 5px 7px;
+  border: 1px solid #f1dcaf;
+  border-radius: 3px;
+  background: #fff8e9;
+  color: #996f21;
+  font-size: 6px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.screenTabs {
+  display: flex;
+  gap: 3px;
+  padding: 7px 10px 0;
+  overflow-x: auto;
+  border-bottom: 1px solid #dae5f3;
+  background: #fff;
+  scrollbar-width: thin;
+  scrollbar-color: #c6d5e8 transparent;
+}
+
+.screenTab {
+  position: relative;
+  display: inline-flex;
+  min-height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 4px 4px 0 0;
+  background: transparent;
+  color: #687891;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease;
+}
+
+.screenTab svg {
+  width: 12px;
+  height: 12px;
+  stroke-width: 1.9;
+}
+
+.screenTab:hover {
+  background: #f4f7fc;
+  color: #2561d7;
+}
+
+.screenTab:focus-visible,
+.appNavItem:focus-visible,
+.calendarCell button:focus-visible,
+.toothButton:focus-visible,
+.calendarActions button:focus-visible,
+.monthControl button:focus-visible {
+  z-index: 2;
+  outline: 2px solid #337cf4;
+  outline-offset: -2px;
+}
+
+.activeScreenTab {
+  background: #f0f5ff;
+  color: #2561d7;
+}
+
+.activeScreenTab::after {
+  position: absolute;
+  right: 8px;
+  bottom: -1px;
+  left: 8px;
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  background: #327af1;
+  content: "";
+}
+
+.appFrame {
+  margin: 10px;
+  overflow: hidden;
+  border: 1px solid #dce6f3;
+  border-radius: 5px;
+  background: #eef5fc;
+  box-shadow: 0 11px 30px rgb(47 69 103 / 11%);
+}
+
+.appHeader {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  gap: 13px;
+  padding-inline: 10px;
+  border-bottom: 1px solid #e7edf6;
+  background: #fff;
+}
+
+.menuButton,
+.headerActions > span {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #dfE8f5;
+  border-radius: 5px;
+  background: #fff;
+  color: #3374e5;
+}
+
+.menuButton {
+  color: #546782;
+}
+
+.menuButton svg,
+.headerActions svg {
+  width: 12px;
+  height: 12px;
+}
+
+.globalSearch {
+  display: flex;
+  width: min(42%, 330px);
+  height: 26px;
+  align-items: center;
+  gap: 7px;
+  margin-inline: auto;
+  padding: 0 9px;
+  border: 1px solid #e2eaf5;
+  border-radius: 5px;
+  background: #f8faff;
+  color: #8291a9;
+  font-size: 7px;
+}
+
+.globalSearch > svg {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  color: #75859e;
+}
+
+.globalSearch kbd {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: #9ba8b9;
+  font-size: 6px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.notification {
+  position: relative;
+}
+
+.notification i {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #ee6470;
+}
+
+.headerActions > span.userAvatar,
+.userAvatar {
+  border: 0;
+  border-radius: 50%;
+  background: #e8eefa;
+  color: #4469a2;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.mobileLogo,
+.mobileScreenTitle {
+  display: none;
+}
+
+.appContent {
+  display: grid;
+  grid-template-columns: 138px minmax(0, 1fr);
+  min-height: 382px;
+}
+
+.appSidebar {
+  position: relative;
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  border-right: 1px solid #e6edf5;
+  background: #fff;
+}
+
+.branchSwitch {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  gap: 5px;
+  margin: 9px 8px 5px;
+  padding: 0 6px;
+  border: 1px solid #e1eafa;
+  border-radius: 4px;
+  background: #f7faff;
+  color: #425f93;
+  font-size: 7px;
+  font-weight: 650;
+}
+
+.branchSwitch svg:first-child {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 auto;
+  color: #3477eb;
+}
+
+.branchSwitch svg:last-child {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.appSidebar nav {
+  flex: 1;
+  padding: 0 6px 54px;
+  overflow: hidden;
+}
+
+.navGroup {
+  margin-top: 10px;
+}
+
+.navSection {
+  display: block;
+  padding: 0 5px;
+  color: #9aa8bb;
+  font-size: 5px;
+  font-weight: 750;
+  letter-spacing: 0.075em;
+  white-space: nowrap;
+}
+
+.appNavItem {
+  display: flex;
+  width: 100%;
+  min-height: 25px;
+  align-items: center;
+  gap: 7px;
+  margin-top: 3px;
+  padding: 0 6px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #42516a;
+  font: inherit;
+  font-size: 7px;
+  font-weight: 550;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.appNavItem:hover {
+  background: #f3f6fb;
+  color: #2b68db;
+}
+
+.appNavItem svg {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 auto;
+  color: #61738f;
+  stroke-width: 1.85;
+}
+
+.activeAppNavItem,
+.activeAppNavItem:hover {
+  background: #367ff0;
+  color: #fff;
+  box-shadow: 0 4px 10px rgb(54 127 240 / 20%);
+}
+
+.activeAppNavItem svg {
+  color: #fff;
+}
+
+.sidebarFooter {
+  position: absolute;
+  right: 7px;
+  bottom: 8px;
+  left: 7px;
+  display: flex;
+  height: 34px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 5px;
+  border: 1px solid #e7edf6;
+  border-radius: 4px;
+  background: #fbfcff;
+}
+
+.sidebarAvatar {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9effd;
+  color: #5873a6;
+  font-size: 6px;
+  font-weight: 750;
+}
+
+.sidebarFooter > span:nth-child(2) {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.sidebarFooter strong,
+.sidebarFooter small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebarFooter strong {
+  color: #465671;
+  font-size: 6px;
+  font-weight: 700;
+}
+
+.sidebarFooter small {
+  color: #8a98ac;
+  font-size: 6px;
+}
+
+.sidebarFooter > svg {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: #7e8aa0;
+}
+
+.screenPanel {
+  min-width: 0;
+  padding: 12px 12px 8px;
+  overflow: hidden;
+  background: #eef5fc;
+}
+
+.screenContent {
+  display: flex;
+  min-width: 0;
+  min-height: 304px;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.screenHeader {
+  display: flex;
+  min-height: 39px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.screenHeading {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.screenEyebrow {
+  color: #7f91ab;
+  font-size: 5px;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+}
+
+.screenHeading h3 {
+  margin: 0;
+  color: #25354c;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.screenHeading p {
+  overflow: hidden;
+  color: #7889a1;
+  font-size: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.screenActions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.softButton {
+  display: inline-flex;
+  height: 23px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 7px;
+  border: 1px solid #e0e8f4;
+  border-radius: 4px;
+  background: #fff;
+  color: #596a83;
+  font-size: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.softButton > svg {
+  width: 9px;
+  height: 9px;
+  stroke-width: 2;
+}
+
+.softButtonPrimary {
+  border-color: #3479ef;
+  background: #3479ef;
+  color: #fff;
+  box-shadow: 0 3px 7px rgb(52 121 239 / 15%);
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.statCard {
+  position: relative;
+  display: grid;
+  min-height: 66px;
+  grid-template-columns: 23px 1fr;
+  align-content: center;
+  align-items: center;
+  column-gap: 7px;
+  padding: 9px;
+  border: 1px solid #e8edf5;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 3px 9px rgb(38 65 102 / 3%);
+}
+
+.statIcon {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  grid-row: 1 / span 2;
+  place-items: center;
+  border-radius: 6px;
+  background: #eef4ff;
+  color: #347bf2;
+}
+
+.statIcon > svg {
+  width: 11px;
+  height: 11px;
+}
+
+.statIcon.violet {
+  background: #f4eeff;
+  color: #9a65df;
+}
+
+.statIcon.green {
+  background: #eafaf3;
+  color: #32a67d;
+}
+
+.statIcon.amber {
+  background: #fff4e8;
+  color: #dc9850;
+}
+
+.statLabel {
+  overflow: hidden;
+  color: #7586a0;
+  font-size: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statCard > strong {
+  margin-top: 3px;
+  color: #25354b;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: -0.055em;
+}
+
+.statChange {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  color: #8896aa;
+  font-size: 5px;
+}
+
+.statChange > span {
+  color: #40a983;
+}
+
+.dashboardPanels {
+  display: grid;
+  min-height: 134px;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 8px;
+}
+
+.panel {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #e8edf5;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 3px 9px rgb(38 65 102 / 3%);
+}
+
+.panelHeading {
+  display: flex;
+  min-height: 22px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.panelHeading > div {
+  display: grid;
+  gap: 4px;
+}
+
+.panelHeading h4 {
+  margin: 0;
+  color: #33435b;
+  font-size: 7px;
+  font-weight: 750;
+}
+
+.panelHeading > div > span {
+  color: #8895a9;
+  font-size: 5px;
+}
+
+.panelHeading > svg,
+.moreIcon {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 auto;
+  color: #8492a7;
+}
+
+.todayRow {
+  display: grid;
+  grid-template-columns: 38px 21px minmax(0, 1fr) 6px;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  border-top: 1px solid #eef1f7;
+}
+
+.timePill {
+  color: #8290a5;
+  font-size: 5px;
+}
+
+.avatarDot {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9effa;
+  color: #6e80a1;
+  font-size: 6px;
+}
+
+.avatar2 {
+  background: #faeee6;
+  color: #a07b63;
+}
+
+.avatar3 {
+  background: #e7f4ed;
+  color: #5d8a72;
+}
+
+.todayDetails {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.todayDetails strong {
+  overflow: hidden;
+  color: #44536a;
+  font-size: 6px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.todayDetails small {
+  overflow: hidden;
+  color: #8996a9;
+  font-size: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statusDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e7ac55;
+}
+
+.statusGreen {
+  background: #44bb8a;
+}
+
+.periodPill {
+  display: inline-flex;
+  height: 17px;
+  align-items: center;
+  gap: 4px;
+  padding-inline: 6px;
+  border: 1px solid #e7ebf2;
+  border-radius: 3px;
+  color: #667791;
+  font-size: 5px;
+}
+
+.periodPill svg {
+  width: 8px;
+  height: 8px;
+}
+
+.chartArea {
+  display: grid;
+  height: 98px;
+  grid-template-columns: 14px 1fr;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.chartLabels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 4px 9px;
+  color: #93a1b4;
+  font-size: 5px;
+}
+
+.chart {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.chart > i {
+  position: absolute;
+  right: 0;
+  left: 0;
+  border-top: 1px dashed #e9edf4;
+}
+
+.chart > i:nth-child(1) {
+  top: 7%;
+}
+
+.chart > i:nth-child(2) {
+  top: 34%;
+}
+
+.chart > i:nth-child(3) {
+  top: 61%;
+}
+
+.chart > i:nth-child(4) {
+  top: 88%;
+}
+
+.chart > svg {
+  position: absolute;
+  inset: 0 0 10px;
+  width: 100%;
+  height: calc(100% - 10px);
+  overflow: visible;
+}
+
+.chartLine {
+  fill: none;
+  stroke: #347afa;
+  stroke-width: 2.4px;
+  vector-effect: non-scaling-stroke;
+}
+
+.chartFill {
+  fill: url("#chartFill");
+  fill: #347afa;
+  fill-opacity: 0.09;
+}
+
+.chart circle {
+  fill: #347afa;
+  stroke: #fff;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.chartXLabels {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #8795a9;
+  font-size: 5px;
+}
+
+.calendarToolbar {
+  display: flex;
+  min-height: 37px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 5px 7px;
+  border: 1px solid #e5ebf4;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgb(38 65 102 / 3%);
+}
+
+.monthControl,
+.calendarActions {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.monthControl > svg {
+  width: 12px;
+  height: 12px;
+  margin-inline: 4px;
+  color: #5c6b83;
+}
+
+.monthControl > strong {
+  min-width: 81px;
+  color: #44536a;
+  font-size: 7px;
+  text-align: center;
+}
+
+.monthControl > button {
+  display: grid;
+  width: 19px;
+  height: 20px;
+  place-items: center;
+  border: 1px solid #e5eaf2;
+  border-radius: 3px;
+  background: #fff;
+  color: #536883;
+  cursor: pointer;
+}
+
+.monthControl > button svg {
+  width: 10px;
+  height: 10px;
+}
+
+.monthControl > span {
+  padding-inline: 5px;
+  color: #3479ec;
+  font-size: 6px;
+  font-weight: 650;
+}
+
+.calendarGrid {
+  overflow: hidden;
+  border: 1px solid #e4eaf2;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.calendarDays,
+.calendarCells {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendarDays > span {
+  display: grid;
+  height: 24px;
+  place-items: center;
+  border-right: 1px solid #e8edf4;
+  background: #f8faff;
+  color: #6d7d96;
+  font-size: 5px;
+  font-weight: 750;
+}
+
+.calendarDays > span:last-child {
+  border-right: 0;
+}
+
+.calendarCell {
+  min-width: 0;
+  min-height: 211px;
+  padding: 6px 4px;
+  border-top: 1px solid #e8edf4;
+  border-right: 1px solid #e8edf4;
+  background: #fff;
+}
+
+.calendarCell:last-child {
+  border-right: 0;
+}
+
+.calendarDate {
+  display: grid;
+  width: 15px;
+  height: 15px;
+  place-items: center;
+  margin-left: auto;
+  border-radius: 4px;
+  color: #8b98ab;
+  font-size: 6px;
+  font-weight: 600;
+}
+
+.calendarToday {
+  background: #347bf1;
+  color: #fff;
+  box-shadow: 0 2px 5px rgb(52 123 241 / 20%);
+}
+
+.calendarEvent {
+  display: grid;
+  gap: 5px;
+  margin-top: 11px;
+  padding: 6px 5px;
+  border-left: 2px solid #49ab7c;
+  border-radius: 0 3px 3px 0;
+  background: #f1f7f3;
+}
+
+.calendarEvent strong,
+.calendarEvent span,
+.calendarEvent small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.calendarEvent strong {
+  color: #3e5268;
+  font-size: 6px;
+}
+
+.calendarEvent span {
+  color: #65778c;
+  font-size: 5px;
+}
+
+.calendarEvent small {
+  color: #8492a4;
+  font-size: 4px;
+}
+
+.eventblue {
+  border-left-color: #4989e9;
+  background: #f1f5fd;
+}
+
+.eventpeach {
+  border-left-color: #e7a56d;
+  background: #fcf6ef;
+}
+
+.screenContent > .tablePanel,
+.tablePanel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e6ebf3;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.tableTitle {
+  display: flex;
+  min-height: 29px;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 9px;
+  border-bottom: 1px solid #e9edf4;
+}
+
+.tableTitle > strong {
+  color: #42526a;
+  font-size: 7px;
+  font-weight: 750;
+}
+
+.tableTitle > span {
+  display: grid;
+  min-width: 20px;
+  height: 16px;
+  place-items: center;
+  padding-inline: 5px;
+  border-radius: 9px;
+  background: #eaf1ff;
+  color: #3578e9;
+  font-size: 5px;
+}
+
+.tableScroll {
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c9d6e8 transparent;
+}
+
+.tableRow {
+  display: grid;
+  min-width: 405px;
+  min-height: 38px;
+  grid-template-columns: 30px 1.35fr 0.68fr 0.92fr 0.86fr 18px;
+  align-items: center;
+  gap: 5px;
+  padding-inline: 8px;
+  border-bottom: 1px solid #eff1f6;
+}
+
+.tableRow:last-child {
+  border-bottom: 0;
+}
+
+.tableRow > span {
+  min-width: 0;
+  overflow: hidden;
+  color: #65748b;
+  font-size: 5px;
+  text-overflow: ellipsis;
+}
+
+.tableRow > span:nth-child(2),
+.tableRow > span:nth-child(4) {
+  display: grid;
+  gap: 3px;
+}
+
+.tableRow strong {
+  overflow: hidden;
+  color: #394961;
+  font-size: 6px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tableRow small {
+  color: #8996a8;
+  font-size: 5px;
+}
+
+.tableHeader {
+  min-height: 23px;
+  background: #f8faff;
+}
+
+.tableHeader > span {
+  color: #8998ad;
+  font-size: 5px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
+}
+
+.rowNumber {
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border: 1px solid #dce8fc;
+  border-radius: 4px;
+  background: #f3f7ff;
+  color: #467ce0;
+  font-size: 5px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.tableStatus {
+  display: inline-block;
+  max-width: 100%;
+  padding: 4px 5px;
+  overflow: hidden;
+  border: 1px solid #e7eaf1;
+  border-radius: 9px;
+  background: #f3f5f9;
+  color: #6e7b91;
+  font-size: 5px;
+  font-style: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tableStatusGreen {
+  border-color: #c8efe0;
+  background: #ebfaf3;
+  color: #23966c;
+}
+
+.moreIcon {
+  width: 11px;
+  height: 11px;
+}
+
+.patientBanner {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 7px;
+  padding-inline: 9px;
+  border: 1px solid #e6ebf3;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.patientAvatar {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9efff;
+  color: #5a78b8;
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.patientBanner > span:nth-child(2) {
+  display: grid;
+  gap: 3px;
+}
+
+.patientBanner > span:nth-child(2) strong {
+  color: #43536b;
+  font-size: 7px;
+}
+
+.patientBanner > span:nth-child(2) small {
+  color: #8996a9;
+  font-size: 5px;
+}
+
+.demoStatus {
+  margin-left: auto;
+  padding: 4px 6px;
+  border-radius: 3px;
+  background: #fff5e6;
+  color: #a17630;
+  font-size: 5px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+}
+
+.chartToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 7px 9px;
+  border: 1px solid #e5ecf6;
+  border-radius: 5px;
+  background: #f8faff;
+}
+
+.chartToolbar > div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.chartToolbar > div:first-child strong {
+  color: #3c4c66;
+  font-size: 7px;
+}
+
+.chartToolbar > div:first-child span {
+  color: #8a98ac;
+  font-size: 5px;
+}
+
+.chartToolbar > div:last-child {
+  display: flex;
+  gap: 3px;
+}
+
+.chartToolbar button {
+  height: 19px;
+  padding-inline: 6px;
+  border: 1px solid #e2e9f4;
+  border-radius: 10px;
+  background: #fff;
+  color: #64758e;
+  font: inherit;
+  font-size: 5px;
+  white-space: nowrap;
+}
+
+.chartToolbar .clearButton {
+  color: #d67370;
+}
+
+.toothGrid {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  gap: 3px;
+  padding: 8px 5px;
+  border: 1px solid #e1e9f4;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.toothButton {
+  display: grid;
+  min-width: 0;
+  min-height: 48px;
+  justify-items: center;
+  gap: 2px;
+  padding: 3px 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+.toothButton:hover {
+  background: #f5f8fe;
+}
+
+.toothButton.selectedTooth {
+  border-color: #d9e7ff;
+  background: #edf4ff;
+}
+
+.tooth {
+  width: clamp(12px, 2.4vw, 23px);
+  max-width: 24px;
+  height: 34px;
+}
+
+.toothButton > span {
+  color: #6f819a;
+  font-size: 5px;
+}
+
+.planControls {
+  display: grid;
+  grid-template-columns: 0.7fr 1.1fr 1.1fr auto;
+  align-items: center;
+  gap: 7px;
+  padding: 8px;
+  border: 1px solid #e6ebf3;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.planControls > div {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.planControls > div > span {
+  color: #8190a5;
+  font-size: 5px;
+}
+
+.planControls > div > strong {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  padding: 5px;
+  overflow: hidden;
+  border: 1px solid #e5eaf2;
+  border-radius: 3px;
+  background: #fbfcff;
+  color: #53647c;
+  font-size: 5px;
+  font-weight: 550;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.planControls > div > strong svg {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+}
+
+.planControls > .softButton {
+  align-self: end;
+}
+
+.treatmentPatient {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-inline: 9px;
+  border: 1px solid #e6ebf3;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.treatmentPatient > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.treatmentPatient .patientAvatar {
+  width: 21px;
+  height: 21px;
+}
+
+.treatmentPatient > span:first-child > span {
+  display: grid;
+  gap: 3px;
+}
+
+.treatmentPatient strong {
+  color: #43536b;
+  font-size: 6px;
+}
+
+.treatmentPatient small {
+  color: #8996a9;
+  font-size: 5px;
+}
+
+.planDraft {
+  padding: 4px 6px;
+  border: 1px solid #ecdcb7;
+  border-radius: 3px;
+  background: #fff9ec;
+  color: #997337;
+  font-size: 5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.treatmentLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(95px, 0.7fr);
+  align-items: start;
+  gap: 7px;
+}
+
+.procedureList {
+  padding-inline: 7px;
+}
+
+.procedureRow {
+  display: grid;
+  min-height: 31px;
+  grid-template-columns: 20px minmax(0, 1fr) auto 12px;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid #eff1f6;
+}
+
+.procedureRow:last-child {
+  border-bottom: 0;
+}
+
+.toothNumber {
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border-radius: 4px;
+  background: #edf4ff;
+  color: #4279dc;
+  font-size: 6px;
+  font-weight: 700;
+}
+
+.procedureRow > span:nth-child(2) {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.procedureRow > span:nth-child(2) > strong {
+  overflow: hidden;
+  color: #4a5b73;
+  font-size: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.procedureRow > span:nth-child(2) > small {
+  overflow: hidden;
+  color: #8a97a8;
+  font-size: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.procedureRow > strong {
+  color: #50627a;
+  font-size: 6px;
+}
+
+.treatmentTotal {
+  display: flex;
+  min-height: 27px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding-inline: 8px;
+  border-top: 1px solid #e9edf4;
+  background: #fafbfe;
+}
+
+.treatmentTotal > span {
+  color: #8391a4;
+  font-size: 5px;
+}
+
+.treatmentTotal > strong {
+  color: #31435b;
+  font-size: 8px;
+}
+
+.estimateAside {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 9px;
+  border: 1px solid #e2eafa;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.estimateAside > span {
+  color: #8492a6;
+  font-size: 5px;
+  font-weight: 750;
+  letter-spacing: 0.07em;
+}
+
+.estimateAside > strong {
+  color: #263951;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+}
+
+.estimateAside > small {
+  color: #929daf;
+  font-size: 5px;
+}
+
+.estimateAside > i {
+  height: 1px;
+  background: #edf0f5;
+}
+
+.estimateAside > div {
+  display: grid;
+  gap: 6px;
+}
+
+.estimateAside > div > span {
+  display: flex;
+  justify-content: space-between;
+  color: #74839a;
+  font-size: 5px;
+}
+
+.estimateAside > div b {
+  color: #52637b;
+}
+
+.estimateAside > .softButton {
+  width: 100%;
+  margin-top: 3px;
+  font-size: 5px;
+}
+
+.doctorStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.doctorStats > span {
+  display: grid;
+  gap: 3px;
+  padding: 7px 8px;
+  border: 1px solid #e6ebf3;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.doctorStats small {
+  color: #8695aa;
+  font-size: 5px;
+  font-weight: 700;
+}
+
+.doctorStats strong {
+  color: #335db0;
+  font-size: 11px;
+}
+
+.doctorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.doctorCard {
+  position: relative;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #e2eaf6;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 3px 9px rgb(38 65 102 / 3%);
+}
+
+.doctorCard > .moreIcon {
+  position: absolute;
+  top: 8px;
+  right: 7px;
+}
+
+.doctorAvatar {
+  display: grid;
+  width: 33px;
+  height: 33px;
+  place-items: center;
+  border: 3px solid #f1f5ff;
+  border-radius: 50%;
+  background: #eaf0ff;
+  color: #4775d4;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.doctorB {
+  border-color: #f6f0ff;
+  background: #f0eaff;
+  color: #8b63cc;
+}
+
+.doctorC {
+  border-color: #eff9f4;
+  background: #e7f5ec;
+  color: #5c9873;
+}
+
+.doctorName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  margin-top: 9px;
+}
+
+.doctorName h4 {
+  overflow: hidden;
+  color: #34445c;
+  font-size: 7px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.doctorAvailability {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 4px;
+  border-radius: 9px;
+  background: #eaf9f1;
+  color: #299469;
+  font-size: 5px;
+}
+
+.doctorAvailability > i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #34b37f;
+}
+
+.doctorAvailability.away {
+  background: #fff5e8;
+  color: #b17e35;
+}
+
+.doctorAvailability.away > i {
+  background: #d39a4c;
+}
+
+.doctorCard > p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 7px;
+  overflow: hidden;
+  color: #77869b;
+  font-size: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.doctorCard > p > svg {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  color: #7b8da8;
+}
+
+.doctorDivider {
+  margin-block: 8px;
+  border-top: 1px solid #edf0f5;
+}
+
+.doctorMetrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.doctorMetrics > span {
+  display: grid;
+  gap: 5px;
+  padding: 6px;
+  border-radius: 4px;
+  background: #f5f7fb;
+  color: #8290a4;
+  font-size: 5px;
+}
+
+.doctorMetrics strong {
+  overflow: hidden;
+  color: #43556f;
+  font-size: 7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reportTabs {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  overflow-x: auto;
+  border: 1px solid #e6ebf3;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.reportTabs > span {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  border-radius: 3px;
+  color: #65758c;
+  font-size: 6px;
+  white-space: nowrap;
+}
+
+.reportTabs > span:first-child {
+  background: #357cf0;
+  color: #fff;
+  font-weight: 650;
+}
+
+.reportMetricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.reportMetric {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 78px;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  overflow: hidden;
+  border: 1px solid #e7ecf4;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.reportMetric > span {
+  color: #7d8da4;
+  font-size: 5px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+}
+
+.reportMetric > strong {
+  overflow: hidden;
+  color: #26364e;
+  font-size: clamp(8px, 1.2vw, 13px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reportMetric > small {
+  color: #8c99ac;
+  font-size: 5px;
+}
+
+.sparkline {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 53px;
+  height: 22px;
+  opacity: 0.7;
+}
+
+.sparklineArea {
+  fill: #347afa;
+  fill-opacity: 0.08;
+}
+
+.sparklineLine {
+  fill: none;
+  stroke: #347afa;
+  stroke-width: 1.7px;
+  vector-effect: non-scaling-stroke;
+}
+
+.sparklinePoint {
+  fill: #347afa;
+}
+
+.reportMetric:nth-child(2) .sparklineLine,
+.reportMetric:nth-child(2) .sparklinePoint {
+  stroke: #de936d;
+  fill: #de936d;
+}
+
+.reportMetric:nth-child(3) .sparklineLine,
+.reportMetric:nth-child(3) .sparklinePoint {
+  stroke: #4aaf8a;
+  fill: #4aaf8a;
+}
+
+.reportRows {
+  padding-inline: 8px;
+}
+
+.reportRow {
+  display: grid;
+  min-height: 24px;
+  grid-template-columns: 0.9fr 0.8fr 1.1fr auto;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid #eff1f6;
+}
+
+.reportRow:last-child {
+  border-bottom: 0;
+}
+
+.reportRow > span {
+  overflow: hidden;
+  color: #718098;
+  font-size: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reportRow .reportAmount {
+  color: #465974;
+  font-weight: 700;
+}
+
+.branchMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.branchMetrics > span {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  align-content: center;
+  align-items: center;
+  gap: 3px 6px;
+  min-height: 40px;
+  padding: 6px;
+  border: 1px solid #e6ebf4;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.branchMetrics > span > svg {
+  width: 20px;
+  height: 20px;
+  grid-row: 1 / span 2;
+  padding: 4px;
+  border-radius: 5px;
+  background: #eaf1ff;
+  color: #4681ef;
+}
+
+.branchMetrics > span:nth-child(2) > svg {
+  background: #f1edff;
+  color: #8465db;
+}
+
+.branchMetrics > span:nth-child(3) > svg {
+  background: #e8f8f0;
+  color: #35a17d;
+}
+
+.branchMetrics small {
+  color: #8896a9;
+  font-size: 5px;
+  font-weight: 700;
+}
+
+.branchMetrics strong {
+  color: #33465f;
+  font-size: 10px;
+}
+
+.branchTable {
+  overflow: hidden;
+  border: 1px solid #e6ebf3;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.branchRow {
+  display: grid;
+  min-width: 440px;
+  min-height: 37px;
+  grid-template-columns: 1.1fr 0.72fr 1fr 0.92fr 42px;
+  align-items: center;
+  gap: 7px;
+  padding-inline: 8px;
+  border-bottom: 1px solid #eef1f6;
+}
+
+.branchRow:last-child {
+  border-bottom: 0;
+}
+
+.branchRow > span {
+  min-width: 0;
+  overflow: hidden;
+  color: #6d7c92;
+  font-size: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.branchRow > span > small {
+  display: block;
+  margin-top: 3px;
+  color: #8b98aa;
+  font-size: 5px;
+}
+
+.branchTableHeader {
+  min-height: 22px;
+  background: #f8faff;
+}
+
+.branchTableHeader > span {
+  color: #8a98ab;
+  font-size: 5px;
+  font-weight: 700;
+}
+
+.branchName {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.branchName strong {
+  overflow: hidden;
+  color: #42526a;
+  font-size: 6px;
+  text-overflow: ellipsis;
+}
+
+.branchIcon {
+  display: grid;
+  width: 21px;
+  height: 21px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf1ff;
+  color: #5281d9;
+}
+
+.branchIcon svg {
+  width: 11px;
+  height: 11px;
+}
+
+.branchgreen {
+  background: #eaf8ef;
+  color: #40a078;
+}
+
+.branchviolet {
+  background: #f2edff;
+  color: #8f6cdd;
+}
+
+.branchStatus {
+  width: fit-content;
+  padding: 4px 6px;
+  border-radius: 8px;
+  background: #eaf9f0;
+  color: #28976b !important;
+  font-size: 5px !important;
+  font-weight: 650;
+}
+
+.demoFootnote {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  color: #73859c;
+  font-size: 5px;
+}
+
+.demoFootnote svg {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  color: #57a080;
+}
+
+.showcaseFooter {
+  display: flex;
+  min-height: 31px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  padding: 0 13px;
+  border-top: 1px solid #e3eaf3;
+  background: #fff;
+  color: #77879c;
+  font-size: 6px;
+}
+
+.showcaseFooter > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #43b685;
+  box-shadow: 0 0 0 3px rgb(67 182 133 / 11%);
+}
+
+@media (max-width: 1050px) {
+  .appContent {
+    grid-template-columns: 114px minmax(0, 1fr);
+  }
+
+  .appSidebar nav {
+    padding-inline: 5px;
+  }
+
+  .screenPanel {
+    padding: 9px 8px 7px;
+  }
+
+  .screenActions > .softButton {
+    padding-inline: 5px;
+  }
+
+  .screenTab {
+    padding-inline: 7px;
+  }
+
+  .screenTab > span {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 720px) {
+  .showcaseTop {
+    min-height: 47px;
+  }
+
+  .appFrame {
+    margin: 8px;
+  }
+
+  .appContent {
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+
+  .screenPanel {
+    padding: 9px 8px 7px;
+  }
+
+  .screenContent {
+    min-height: 320px;
+  }
+
+  .screenHeader {
+    align-items: flex-start;
+  }
+
+  .screenHeading h3 {
+    font-size: 11px;
+  }
+
+  .screenHeading p {
+    max-width: 210px;
+  }
+
+  .screenActions {
+    flex-wrap: wrap;
+  }
+
+  .screenActions > .softButton:nth-child(n + 3) {
+    display: none;
+  }
+
+  .calendarToolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .calendarActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .calendarActions > .softButton:nth-child(-n + 2) {
+    display: none;
+  }
+
+  .calendarCell {
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 520px) {
+  .showcaseTop {
+    padding-inline: 10px;
+  }
+
+  .screenTabs {
+    padding-inline: 5px;
+  }
+
+  .screenTab {
+    min-height: 32px;
+    gap: 4px;
+    padding-inline: 6px;
+  }
+
+  .screenTab svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .screenTab > span {
+    font-size: 6px;
+  }
+
+  .appHeader {
+    height: 35px;
+    gap: 7px;
+    padding-inline: 7px;
+  }
+
+  .appHeader > .menuButton {
+    display: none;
+  }
+
+  .mobileLogo {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .mobileLogo .brandMark {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  .mobileLogo > strong {
+    font-size: 7px;
+    letter-spacing: -0.03em;
+  }
+
+  .globalSearch {
+    width: auto;
+    flex: 1;
+    min-width: 30px;
+    height: 23px;
+    margin-inline: 0;
+  }
+
+  .globalSearch kbd,
+  .headerActions > span:nth-child(1),
+  .headerActions > span:nth-child(2) {
+    display: none;
+  }
+
+  .headerActions {
+    gap: 4px;
+  }
+
+  .headerActions > span {
+    width: 21px;
+    height: 21px;
+  }
+
+  .appContent {
+    display: block;
+    min-height: 0;
+  }
+
+  .appSidebar {
+    display: none;
+  }
+
+  .screenPanel {
+    min-height: 336px;
+    padding: 9px 8px 7px;
+  }
+
+  .mobileScreenTitle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    color: #526681;
+    font-size: 7px;
+    font-weight: 650;
+  }
+
+  .mobileScreenTitle svg {
+    width: 10px;
+    height: 10px;
+    color: #3479ef;
+  }
+
+  .screenContent {
+    min-height: 287px;
+  }
+
+  .screenHeader {
+    min-height: 33px;
+    gap: 4px;
+  }
+
+  .screenHeading h3 {
+    font-size: 10px;
+  }
+
+  .screenHeading p {
+    max-width: 184px;
+    font-size: 5px;
+  }
+
+  .screenActions {
+    gap: 3px;
+  }
+
+  .screenActions > .softButton {
+    height: 21px;
+    padding-inline: 5px;
+    font-size: 5px;
+  }
+
+  .screenActions > .softButton > svg {
+    width: 8px;
+    height: 8px;
+  }
+
+  .screenActions > .softButton:nth-child(2) {
+    display: none;
+  }
+
+  .statGrid {
+    gap: 4px;
+  }
+
+  .statCard {
+    min-height: 57px;
+    grid-template-columns: 17px 1fr;
+    column-gap: 4px;
+    padding: 6px;
+  }
+
+  .statIcon {
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+  }
+
+  .statIcon > svg {
+    width: 9px;
+    height: 9px;
+  }
+
+  .statLabel {
+    font-size: 5px;
+  }
+
+  .statCard > strong {
+    font-size: 10px;
+  }
+
+  .statChange {
+    top: 5px;
+    right: 5px;
+    font-size: 4px;
+  }
+
+  .dashboardPanels {
+    grid-template-columns: 1fr;
+  }
+
+  .trendPanel {
+    display: none;
+  }
+
+  .todayPanel {
+    min-height: 112px;
+  }
+
+  .calendarToolbar {
+    flex-direction: row;
+    align-items: center;
+    padding-inline: 4px;
+  }
+
+  .monthControl {
+    gap: 2px;
+  }
+
+  .monthControl > svg {
+    width: 10px;
+    height: 10px;
+    margin-inline: 1px;
+  }
+
+  .monthControl > strong {
+    min-width: 66px;
+    font-size: 6px;
+  }
+
+  .monthControl > button {
+    width: 16px;
+    height: 18px;
+  }
+
+  .monthControl > span {
+    padding-inline: 2px;
+    font-size: 5px;
+  }
+
+  .calendarActions {
+    width: auto;
+    gap: 3px;
+  }
+
+  .calendarActions > .softButton {
+    height: 20px;
+    padding-inline: 4px;
+    font-size: 5px;
+  }
+
+  .calendarActions > .softButton:nth-child(n + 2) {
+    display: none;
+  }
+
+  .calendarCell {
+    min-height: 145px;
+    padding-inline: 2px;
+  }
+
+  .calendarEvent {
+    gap: 4px;
+    padding: 5px 3px;
+  }
+
+  .calendarEvent strong {
+    font-size: 5px;
+  }
+
+  .calendarEvent small {
+    font-size: 4px;
+  }
+
+  .tableRow {
+    min-width: 390px;
+  }
+
+  .chartToolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .toothGrid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    row-gap: 2px;
+    padding-inline: 7px;
+  }
+
+  .toothButton {
+    min-height: 40px;
+  }
+
+  .tooth {
+    height: 27px;
+  }
+
+  .planControls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .planControls > .softButton {
+    justify-self: start;
+  }
+
+  .treatmentLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .estimateAside {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 4px 7px;
+  }
+
+  .estimateAside > span,
+  .estimateAside > i,
+  .estimateAside > div {
+    display: none;
+  }
+
+  .estimateAside > strong {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 10px;
+  }
+
+  .estimateAside > small {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .estimateAside > .softButton {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    width: auto;
+  }
+
+  .doctorGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctorCard {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 5px 7px;
+    padding: 7px;
+  }
+
+  .doctorCard > .doctorAvatar {
+    grid-row: 1 / span 2;
+  }
+
+  .doctorCard > .moreIcon {
+    top: 7px;
+    right: 7px;
+  }
+
+  .doctorName {
+    grid-column: 2 / 4;
+    margin-top: 0;
+    padding-right: 16px;
+  }
+
+  .doctorCard > p {
+    grid-column: 2 / 4;
+    margin-top: 0;
+  }
+
+  .doctorDivider,
+  .doctorMetrics {
+    display: none;
+  }
+
+  .doctorStats > span {
+    padding: 5px;
+  }
+
+  .doctorStats small {
+    font-size: 4px;
+  }
+
+  .reportMetricGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reportMetric {
+    min-height: 59px;
+  }
+
+  .reportMetric > strong {
+    font-size: 10px;
+  }
+
+  .branchMetrics > span {
+    grid-template-columns: 18px 1fr;
+    gap: 3px 4px;
+    padding: 4px;
+  }
+
+  .branchMetrics > span > svg {
+    width: 17px;
+    height: 17px;
+    padding: 3px;
+  }
+
+  .branchMetrics small {
+    font-size: 4px;
+  }
+
+  .branchMetrics strong {
+    font-size: 8px;
+  }
+
+  .branchRow {
+    min-width: 420px;
+  }
+
+  .showcaseFooter {
+    min-height: 29px;
+    font-size: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase *,
+  .showcase *::before,
+  .showcase *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -7,6 +7,7 @@ import {
   Braces,
   Code2,
   Database,
+  Download,
   FileCode2,
   GitBranch,
   Globe2,
@@ -277,6 +278,13 @@ export default function Home() {
                 Get in touch <ArrowUpRight size={16} aria-hidden="true" />
               </a>
             </div>
+            <a
+              className={styles.resumeButton}
+              href="/Sinna-Muthu-Resume.pdf"
+              download="Sinna-Muthu-Resume.pdf"
+            >
+              Download resume <Download size={16} aria-hidden="true" />
+            </a>
             <div className={styles.heroStats} aria-label="Career highlights">
               <div>
                 <strong>8+</strong>
@@ -659,6 +667,14 @@ export default function Home() {
             <a className={styles.phoneButton} href="tel:+918525939833">
               <Phone size={17} aria-hidden="true" />
               +91 85259 39833
+            </a>
+            <a
+              className={styles.contactResumeButton}
+              href="/Sinna-Muthu-Resume.pdf"
+              download="Sinna-Muthu-Resume.pdf"
+            >
+              <Download size={17} aria-hidden="true" />
+              Download resume
             </a>
           </div>
           <div className={styles.socialLinks}>

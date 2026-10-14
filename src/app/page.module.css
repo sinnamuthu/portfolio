@@ -225,6 +225,30 @@
   transform: translateY(-2px);
 }
 
+.resumeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  margin-top: 14px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 650;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.resumeButton:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
 .textLink {
   gap: 7px;
   color: var(--ink);
@@ -1034,7 +1058,8 @@
   margin-top: 18px;
 }
 
-.phoneButton {
+.phoneButton,
+.contactResumeButton {
   display: inline-flex;
   min-height: 45px;
   align-items: center;
@@ -1048,7 +1073,13 @@
   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
-.phoneButton:hover {
+.contactResumeButton {
+  border-color: #486489;
+  color: #e6effc;
+}
+
+.phoneButton:hover,
+.contactResumeButton:hover {
   transform: translateY(-2px);
   border-color: #9dc4ff;
   background: rgb(255 255 255 / 8%);

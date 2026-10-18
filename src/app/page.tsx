@@ -73,12 +73,12 @@ const skills = [
   {
     icon: Braces,
     title: "Backend & APIs",
-    items: "PHP · Laravel · Node.js · REST APIs · Authentication",
+    items: "PHP · Laravel · Node.js · Express.js · GraphQL · REST APIs · Authentication",
   },
   {
     icon: Database,
     title: "Data",
-    items: "MySQL · PostgreSQL · Database design",
+    items: "MySQL · PostgreSQL · MongoDB · Database design",
   },
   {
     icon: Server,
@@ -104,6 +104,10 @@ const technologies = [
   { name: "MySQL", detail: "Database", mark: "mysql" },
   { name: "AWS", detail: "Cloud", mark: "aws" },
   { name: "Docker", detail: "Containers", mark: "docker" },
+  { name: "GraphQL", detail: "API query language", mark: "graphql" },
+  { name: "Node.js", detail: "JavaScript runtime", mark: "nodejs" },
+  { name: "Express.js", detail: "Node.js framework", mark: "express" },
+  { name: "MongoDB", detail: "NoSQL database", mark: "mongodb" },
 ];
 
 function SectionHeading({
@@ -216,6 +220,14 @@ function TechnologyMark({ mark }: { mark: string }) {
       return <span className={styles.phpMark}>PHP</span>;
     case "laravel":
       return <span className={styles.laravelMark}>L</span>;
+    case "graphql":
+      return <span className={styles.technologyTextMark}>GQL</span>;
+    case "nodejs":
+      return <span className={styles.technologyTextMark}>JS</span>;
+    case "express":
+      return <span className={styles.technologyTextMark}>EX</span>;
+    case "mongodb":
+      return <span className={styles.technologyTextMark}>DB</span>;
     default:
       return <Database aria-hidden="true" />;
   }

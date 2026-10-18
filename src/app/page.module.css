@@ -2184,6 +2184,28 @@
   color: #1875a5;
 }
 
+.brandgraphql {
+  color: #e535ab;
+}
+
+.brandnodejs {
+  border-radius: 50%;
+  background: #5fa04e;
+  color: white;
+}
+
+.brandexpress {
+  border-radius: 50%;
+  background: #262626;
+  color: white;
+}
+
+.brandmongodb {
+  border-radius: 50%;
+  background: #47a248;
+  color: white;
+}
+
 .brandaws {
   color: #243853;
 }

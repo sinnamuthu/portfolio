@@ -68,17 +68,17 @@ const skills = [
   {
     icon: Layers3,
     title: "Frontend",
-    items: "React · Next.js · TypeScript · JavaScript · Angular",
+    items: "React · Next.js · TypeScript · JavaScript",
   },
   {
     icon: Braces,
     title: "Backend & APIs",
-    items: "PHP · Laravel · Node.js · Express.js · GraphQL · REST APIs · Authentication",
+    items: "PHP · Laravel · Node.js · Express.js · REST APIs · Authentication",
   },
   {
     icon: Database,
     title: "Data",
-    items: "MySQL · PostgreSQL · MongoDB · Database design",
+    items: "MySQL · PostgreSQL · Database design",
   },
   {
     icon: Server,
@@ -92,9 +92,6 @@ const technologies = [
   { name: "Next.js", detail: "Web framework", mark: "next" },
   { name: "React", detail: "Frontend", mark: "react" },
   { name: "TypeScript", detail: "Typed JavaScript", mark: "typescript" },
-  { name: "Angular", detail: "Frontend framework", mark: "angular" },
-  { name: "Ionic", detail: "Mobile apps", mark: "ionic" },
-  { name: "WordPress", detail: "CMS", mark: "wordpress" },
   { name: "HTML", detail: "Markup", mark: "html" },
   { name: "CSS", detail: "Stylesheets", mark: "css" },
   { name: "Bootstrap", detail: "UI framework", mark: "bootstrap" },
@@ -104,10 +101,8 @@ const technologies = [
   { name: "MySQL", detail: "Database", mark: "mysql" },
   { name: "AWS", detail: "Cloud", mark: "aws" },
   { name: "Docker", detail: "Containers", mark: "docker" },
-  { name: "GraphQL", detail: "API query language", mark: "graphql" },
   { name: "Node.js", detail: "JavaScript runtime", mark: "nodejs" },
   { name: "Express.js", detail: "Node.js framework", mark: "express" },
-  { name: "MongoDB", detail: "NoSQL database", mark: "mongodb" },
 ];
 
 function SectionHeading({
@@ -299,7 +294,7 @@ export default function Home() {
             </a>
             <div className={styles.heroStats} aria-label="Career highlights">
               <div>
-                <strong>8+</strong>
+                <strong>4+</strong>
                 <span>years building</span>
               </div>
               <span className={styles.statsDivider} />
